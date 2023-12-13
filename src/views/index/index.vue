@@ -1,19 +1,6 @@
 <template>
   <div class="index-container">
     <el-row :gutter="20">
-      <el-col :lg="24" :md="24" :sm="24" :xl="24" :xs="24">
-        <el-alert v-if="noticeList[0]" :closable="noticeList[0].closable">
-          <div style="display: flex; align-items: center; justify-content: center">
-            <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
-              <img
-                src="https://img.shields.io/github/stars/chuzhixin/vue-admin-better?style=flat-square&label=Stars&logo=github"
-                style="margin-right: 10px"
-              />
-            </a>
-            <p v-html="noticeList[0].title"></p>
-          </div>
-        </el-alert>
-      </el-col>
       <el-col :lg="6" :md="12" :sm="24" :xl="6" :xs="24">
         <el-card shadow="never">
           <div slot="header">

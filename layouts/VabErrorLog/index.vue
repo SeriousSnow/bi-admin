@@ -12,7 +12,7 @@
     <el-dialog
       :visible.sync="dialogTableVisible"
       append-to-body
-      title="vue-admin-better异常捕获(温馨提示：错误必须解决)"
+      title="bi-admin异常捕获(温馨提示：错误必须解决)"
       width="70%"
     >
       <el-table :data="errorLogs">

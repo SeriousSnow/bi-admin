@@ -47,16 +47,9 @@
             <div style="float: right">部署时间:{{ updateTime }}</div>
           </div>
           <div class="bottom-btn">
-            <el-popover placement="top" trigger="hover" width="250">
-              <p>
-                请我们喝杯咖啡，付款后联系qq
-                783963206，我们将邀请您加入我们的讨论群，谢谢您愿意支持开源，加群获取文档、及基础模板，群内大佬众多，希望能帮到大家（如情况不允许，请勿勉强）。
-              </p>
-              <el-image :src="require('@/assets/zfb_kf.jpg')" />
-              <a slot="reference" target="_blank">
-                <el-button type="primary">QQ讨论群、基础版、文档</el-button>
-              </a>
-            </el-popover>
+            <a target="_blank">
+              <el-button type="primary">QQ讨论群、基础版、文档</el-button>
+            </a>
             <a href="https://github.com/chuzhixin/vue-admin-better" target="_blank">
               <el-button type="warning">vue2.x版本 github下载源码点star</el-button>
             </a>

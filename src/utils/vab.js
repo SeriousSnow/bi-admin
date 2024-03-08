@@ -154,7 +154,7 @@ const install = (Vue) => {
         projection: 'baidu',
       },
       attribution: {
-        content: '&copy; vue-admin-beautiful',
+        content: '&copy; bi-admin',
       },
       baseLayer: new maptalks.TileLayer('base', {
         cssFilter: 'sepia(100%) invert(90%)',

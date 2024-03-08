@@ -1,7 +1,7 @@
 {
   "name": "bi-admin",
   "version": "2.5.0",
-  "author": "bi-admin",
+  "author": "GGBone",
   "participants": [],
   "scripts": {
     "serve": "vue-cli-service serve",

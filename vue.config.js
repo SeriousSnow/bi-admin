@@ -1,8 +1,3 @@
-/**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
- * @description cli配置
- */
-
 const path = require('path')
 const {
   publicPath,
@@ -28,8 +23,8 @@ const FileManagerPlugin = require('filemanager-webpack-plugin')
 const dayjs = require('dayjs')
 const date = dayjs().format('YYYY_M_D')
 const time = dayjs().format('YYYY-M-D HH:mm:ss')
-process.env.VUE_APP_TITLE = title || 'vue-admin-beautiful'
-process.env.VUE_APP_AUTHOR = author || 'https://vue-admin-beautiful.com'
+process.env.VUE_APP_TITLE = title || 'vue-admin'
+process.env.VUE_APP_AUTHOR = author || 'GGBone'
 process.env.VUE_APP_UPDATE_TIME = time
 process.env.VUE_APP_VERSION = version
 
@@ -56,6 +51,20 @@ module.exports = {
       errors: true,
     },
     after: mockServer(),
+    proxy: {
+      '/eolink': {
+        target: 'https://mockapi.eolink.com/iaQuBJZdfa33f601b37b2ddb03644258165916b586d661f',
+        changeOrigin: true,
+        ws: true,
+        secure: false,
+      },
+      '/api': {
+        target: 'http://124.220.73.46:10900',
+        changeOrigin: true,
+        ws: true,
+        secure: false,
+      },
+    },
   },
   configureWebpack() {
     return {

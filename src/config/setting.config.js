@@ -35,9 +35,9 @@ const setting = {
   //加载时显示文字
   loadingText: '正在加载中...',
   //token名称
-  tokenName: 'accessToken',
+  tokenName: 'satoken',
   //token在localStorage、sessionStorage存储的key的名称
-  tokenTableName: 'vue-admin-beautiful-2021',
+  tokenTableName: 'satoken',
   //token存储位置localStorage sessionStorage
   storage: 'localStorage',
   //token失效回退到登录页时是否记录本次的路由
@@ -55,7 +55,7 @@ const setting = {
   //vertical布局时是否只保持一个子菜单的展开
   uniqueOpened: true,
   //vertical布局时默认展开的菜单path，使用逗号隔开建议只展开一个
-  defaultOopeneds: ['/vab'],
+  defaultOopeneds: [],
   //需要加loading层的请求，防止重复提交
   debounce: ['doEdit'],
   //需要自动注入并加载的模块

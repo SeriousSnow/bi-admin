@@ -17,6 +17,23 @@ const data = [
     ],
   },
   {
+    path: '/model',
+    component: 'Layout',
+    redirect: 'noRedirect',
+    children: [
+      {
+        path: 'model',
+        name: 'Model',
+        component: '@/views/model/index',
+        mete: {
+          title: '模型管理',
+          icon: 'cube',
+          permissions: ['admin'],
+        },
+      },
+    ],
+  },
+  {
     path: '/personnelManagement',
     component: 'Layout',
     redirect: 'noRedirect',

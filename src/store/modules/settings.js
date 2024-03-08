@@ -1,12 +1,12 @@
 /**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
+ * @author https://bi-admin.com （不想保留author可删除）
  * @description 所有全局配置的状态管理，如无必要请勿修改
  */
 
 import defaultSettings from '@/config'
 
 const { tabsBar, logo, layout, header, themeBar } = defaultSettings
-const theme = JSON.parse(localStorage.getItem('vue-admin-beautiful-theme')) || ''
+const theme = JSON.parse(localStorage.getItem('bi-admin-theme')) || ''
 const state = () => ({
   tabsBar: theme.tabsBar || tabsBar,
   logo,

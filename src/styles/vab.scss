@@ -1,15 +1,15 @@
 /**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
+ * @author https://bi-admin.com （不想保留author可删除）
  * @description 全局样式
  */
 
 @charset "utf-8";
 
-@import './normalize.scss';
-@import './transition.scss';
-@import './loading.scss';
+@import "./normalize.scss";
+@import "./transition.scss";
+@import "./loading.scss";
 
-$base: '.vab';
+$base: ".vab";
 
 @mixin scrollbar {
   max-height: 88vh;
@@ -141,11 +141,11 @@ html {
       }
     }
 
-    .vue-admin-beautiful-wrapper {
+    .bi-admin-wrapper {
       .app-main-container {
         @include base-scrollbar;
 
-        > [class*='-container'] {
+        > [class*="-container"] {
           * {
             transition: none;
           }
@@ -166,7 +166,9 @@ html {
       }
 
       .peg {
-        box-shadow: 0 0 10px $base-color-blue, 0 0 5px $base-color-blue !important;
+        box-shadow:
+          0 0 10px $base-color-blue,
+          0 0 5px $base-color-blue !important;
       }
     }
 

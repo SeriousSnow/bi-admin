@@ -1,8 +1,3 @@
-/**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
- * @description 代码规范
- */
-
 module.exports = {
   printWidth: 140,
   tabWidth: 2,

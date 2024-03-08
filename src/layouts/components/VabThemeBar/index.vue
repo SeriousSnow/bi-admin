@@ -82,7 +82,7 @@
       this.$baseEventBus.$on('theme', () => {
         this.handleOpenThemeBar()
       })
-      const theme = localStorage.getItem('vue-admin-beautiful-theme')
+      const theme = localStorage.getItem('bi-admin-theme')
       if (null !== theme) {
         this.theme = JSON.parse(theme)
         this.handleSetTheme()
@@ -107,7 +107,7 @@
       handleSetTheme() {
         let { name, layout, header, tabsBar } = this.theme
         localStorage.setItem(
-          'vue-admin-beautiful-theme',
+          'bi-admin-theme',
           `{
             "name":"${name}",
             "layout":"${layout}",
@@ -118,7 +118,7 @@
         if (!this.handleIsMobile()) this.changeLayout(layout)
         this.changeHeader(header)
         this.changeTabsBar(tabsBar)
-        document.getElementsByTagName('body')[0].className = `vue-admin-beautiful-theme-${name}`
+        document.getElementsByTagName('body')[0].className = `bi-admin-theme-${name}`
         this.drawerVisible = false
       },
       handleSaveTheme() {
@@ -126,8 +126,8 @@
       },
       handleSetDfaultTheme() {
         let { name } = this.theme
-        document.getElementsByTagName('body')[0].classList.remove(`vue-admin-beautiful-theme-${name}`)
-        localStorage.removeItem('vue-admin-beautiful-theme')
+        document.getElementsByTagName('body')[0].classList.remove(`bi-admin-theme-${name}`)
+        localStorage.removeItem('bi-admin-theme')
         this.$refs['form'].resetFields()
         Object.assign(this.$data, this.$options.data())
         this.changeHeader(defaultLayout)
@@ -139,7 +139,7 @@
         location.reload()
       },
       handleGetCode() {
-        const url = 'https://github.com/chuzhixin/vue-admin-beautiful/tree/master/src/views'
+        const url = 'https://github.com/chuzhixin/bi-admin/tree/master/src/views'
         let path = this.$route.path + '/index.vue'
         if (path === '/vab/menu1/menu1-1/menu1-1-1/index.vue') {
           path = '/vab/nested/menu1/menu1-1/menu1-1-1/index.vue'

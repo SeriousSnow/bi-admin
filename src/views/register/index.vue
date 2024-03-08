@@ -4,7 +4,7 @@
       v-if="nodeEnv !== 'development'"
       :closable="false"
       style="position: fixed"
-      title="beautiful boys and girls欢迎加入vue-admin-beautifulQQ群：972435319"
+      title="beautiful boys and girls欢迎加入bi-adminQQ群：972435319"
       type="success"
     />
     <el-row>

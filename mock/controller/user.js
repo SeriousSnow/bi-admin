@@ -1,5 +1,5 @@
 const accessTokens = {
-  admin: 'admin-accessToken',
+  admin: 'qtcoding ImQ1Eb1LQcDcOq3C9l9px5mOGzIDmUtO',
   editor: 'editor-accessToken',
   test: 'test-accessToken',
 }

@@ -19,7 +19,7 @@ import { isArray } from '@/utils/validate'
 let loadingInstance
 
 /**
- * @author https://vue-admin-beautiful.com （不想保留author可删除）
+ * @author https://bi-admin.com （不想保留author可删除）
  * @description 处理code异常
  * @param {*} code
  * @param {*} msg
@@ -81,7 +81,7 @@ instance.interceptors.response.use(
     } else {
       handleCode(code, msg)
       return Promise.reject(
-        `vue-admin-beautiful请求异常拦截:${JSON.stringify({
+        `bi-admin请求异常拦截:${JSON.stringify({
           url: config.url,
           code,
           msg,

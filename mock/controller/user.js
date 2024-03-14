@@ -1,7 +1,7 @@
-const accessTokens = {
+const satokens = {
   admin: 'qtcoding ImQ1Eb1LQcDcOq3C9l9px5mOGzIDmUtO',
-  editor: 'editor-accessToken',
-  test: 'test-accessToken',
+  editor: 'editor-satoken',
+  test: 'test-satoken',
 }
 
 module.exports = [
@@ -25,8 +25,8 @@ module.exports = [
     type: 'post',
     response(config) {
       const { username } = config.body
-      const accessToken = accessTokens[username]
-      if (!accessToken) {
+      const satoken = satokens[username]
+      if (!satoken) {
         return {
           code: 500,
           msg: '帐户或密码不正确。',
@@ -35,7 +35,7 @@ module.exports = [
       return {
         code: 200,
         msg: 'success',
-        data: { accessToken },
+        data: { satoken },
       }
     },
   },
@@ -53,18 +53,18 @@ module.exports = [
     url: '/userInfo',
     type: 'post',
     response(config) {
-      const { accessToken } = config.body
+      const { satoken } = config.body
       let permissions = ['admin']
       let username = 'admin'
-      if ('admin-accessToken' === accessToken) {
+      if ('admin-satoken' === satoken) {
         permissions = ['admin']
         username = 'admin'
       }
-      if ('editor-accessToken' === accessToken) {
+      if ('editor-satoken' === satoken) {
         permissions = ['editor']
         username = 'editor'
       }
-      if ('test-accessToken' === accessToken) {
+      if ('test-satoken' === satoken) {
         permissions = ['admin', 'editor']
         username = 'test'
       }

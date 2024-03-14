@@ -59,7 +59,7 @@ export const asyncRoutes = [
     redirect: 'noRedirect',
     children: [
       {
-        path: 'model',
+        path: 'index',
         name: 'Model',
         component: () => import('@/views/model/index'),
         meta: {
@@ -76,7 +76,7 @@ export const asyncRoutes = [
     redirect: 'noRedirect',
     children: [
       {
-        path: 'user',
+        path: 'index',
         name: 'User',
         component: () => import('@/views/user/index'),
         meta: {

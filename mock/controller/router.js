@@ -22,7 +22,7 @@ const data = [
     redirect: 'noRedirect',
     children: [
       {
-        path: 'model',
+        path: 'index',
         name: 'Model',
         component: '@/views/model/index',
         mete: {

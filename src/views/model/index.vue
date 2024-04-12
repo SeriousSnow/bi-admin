@@ -61,6 +61,7 @@
         <template #default="{ row }">
           <el-button type="text" @click="handleEdit(row)">编辑</el-button>
           <el-button type="text" @click="handleDelete(row)">删除</el-button>
+          <el-button type="text" @click="handlePreset(row)">预设消息</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -74,6 +75,7 @@
       @size-change="handleSizeChange"
     />
     <table-edit ref="edit" @fetch-data="fetchData" />
+    <preset-dialog ref="preset" @fetch-data="fetchData" />
   </div>
 </template>
 
@@ -81,11 +83,13 @@
   import { doDelete, getList } from '@/api/table'
   import { getModelList, delModel } from '@/api/model'
   import TableEdit from './components/TableEdit'
+  import PresetDialog from './components/PresetDialog'
 
   export default {
     name: 'ComprehensiveTable',
     components: {
       TableEdit,
+      PresetDialog,
     },
     filters: {
       statusFilter(status) {
@@ -167,6 +171,9 @@
           })
         }
       },
+      handlePreset(row) {
+        this.$refs['preset'].showPreset(row)
+      },
       handleSizeChange(val) {
         this.queryForm.pageSize = val
         this.fetchData()
@@ -199,33 +206,6 @@
         setTimeout(() => {
           this.listLoading = false
         }, 500)
-      },
-      testMessage() {
-        this.$baseMessage('test1', 'success')
-      },
-      testALert() {
-        this.$baseAlert('11')
-        this.$baseAlert('11', '自定义标题', () => {
-          /* 可以写回调; */
-        })
-        this.$baseAlert('11', null, () => {
-          /* 可以写回调; */
-        })
-      },
-      testConfirm() {
-        this.$baseConfirm(
-          '你确定要执行该操作?',
-          null,
-          () => {
-            /* 可以写回调; */
-          },
-          () => {
-            /* 可以写回调; */
-          }
-        )
-      },
-      testNotify() {
-        this.$baseNotify('测试消息提示', 'test', 'success', 'bottom-right')
       },
     },
   }

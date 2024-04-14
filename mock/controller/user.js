@@ -1,5 +1,6 @@
+// 自定义token
 const satokens = {
-  admin: 'qtcoding ImQ1Eb1LQcDcOq3C9l9px5mOGzIDmUtO',
+  admin: 'qtcoding gV5DhK9PB9YMjg0QerSdyB5HlBed5gT4',
   editor: 'editor-satoken',
   test: 'test-satoken',
 }

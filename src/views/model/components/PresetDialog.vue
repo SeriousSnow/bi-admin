@@ -82,15 +82,16 @@
       save() {
         this.$refs['form'].validate(async (valid) => {
           if (valid) {
-            const { data } = await addModel(this.form)
+            console.log(this.form)
+            const { data } = await editModel(this.form)
             if (data) {
-              this.$baseMessage('添加成功', 'success')
+              this.$baseMessage('预设成功', 'success')
               this.$refs['form'].resetFields()
               this.dialogFormVisible = false
               this.$emit('fetch-data')
               this.form = this.$options.data().form
             } else {
-              this.$baseMessage('添加失败', 'error')
+              this.$baseMessage('预设失败', 'error')
             }
           } else {
             return false

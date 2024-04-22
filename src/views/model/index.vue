@@ -157,7 +157,6 @@
       },
       handleAdd() {
         this.$refs['edit'].showEdit()
-        // this.$router.push({ path: '/model/edit' })
       },
       handleEdit(row) {
         this.$refs['edit'].showEdit(row)
